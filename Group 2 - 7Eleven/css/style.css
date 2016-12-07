@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'GeosansLight', sans-serif;
+}
+
+.wrapper{
+    margin: 0px auto;
+    padding-left: 140px;
+    width: 1600px;
+    display: block;
+    height: 340px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #b0f3fa;
+}
+
+ul {
+    list-style: none;
+}
+
+#footer-container {
+    background: #006B41;
+    height: 340px;
+}
+
+.footer-class li{
+    font-size: 25px;
+    color: white;
+    padding: 10px 0 15px 0;
+}
+.footer-class {
+    float: left;
+    width: 22%;
+}
