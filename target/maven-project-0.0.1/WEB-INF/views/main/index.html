@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Welcome to 7 eleven</title>
-    <link href="stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../../../resources/img/logo.png">
+    <link href="../../../resources/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <style>
+        .message{
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+
 </head>
 <body>
     <header id="header-image">
@@ -11,12 +20,12 @@
 
     </header>
 
-    <nav>
+    <nav class="wrapper">
         <ul>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Benefits</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a class="nav-link" href="#">Products</a></li>
+            <li><a class="nav-link active" href="#">Register</a></li>
+            <li><a class="nav-link" href="#">Benefits</a></li>
+            <li><a class="nav-link" href="#">Contacts</a></li>
         </ul>
     </nav>
 
@@ -27,14 +36,18 @@
         </article>
         <div class="container">
             <label class="labels">Registration Form</label>
+            <span id="close">close</span>
+            <div id="message"></div>
+
             <form>
+                <input type="hidden" id="csrf-token" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
                 <div>
                     <label>Name</label>
-                    <input class="form-input" type="text">
+                    <input class="form-input" type="text" id="user_name">
                 </div>
                 <div>
                     <label>Email</label>
-                    <input class="form-input" type="text">
+                    <input class="form-input" type="text"  id="user_email">
                 </div>
                 <div>
                     <label>Mobile Number</label>
@@ -58,9 +71,9 @@
 
 
                 <div>
-                    <input type="button" class="form-button" value="Submit">
+                    <input type="button" id="submitBtn" class="form-button" value="Submit">
                 </div>
-                    <img src="img/cards.png" alt="this is and image">
+                    <img src="../../../resources/img/cards.png" alt="this is and image">
 
             </form>
         </div>
@@ -95,5 +108,72 @@
 
         </div>
     </footer>
+
+    <script type="text/javascript" src="../../../resources/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../../../resources/js/jquery.validate.js"></script>
+
+    <script>
+
+        $("#close").hide();
+        $(document).ready(function () {
+            $("#submitBtn").click(function(){
+
+                var name  = $("#user_name").val();
+                var email = $("#user_email").val();
+                var csrf = $("#csrf-token").val();
+
+                $.ajax({
+                    type: "post",
+                    url: "/post",
+                    data: ({
+                        "_csrf" : csrf ,
+                        "name": name,
+                        "email": email
+                    }),
+                    error: function(data){
+                        //alert("error");
+                        console.log(data);
+                    },
+                    success: function(data){
+                        console.log(data);
+                        if(data.hasErrors == true) {
+                            $("#message").show();
+                            //close message
+                            $("#close").show().click(function () {
+                                $("#message").hide();
+                                $(this).hide();
+                            });
+
+                            //display message
+                            var selector = $("#message");
+
+                            selector.addClass("message").css("background-color", "#FF3835").empty();
+
+                            for(var i = 0; i < data.errors.length; i++) {
+                                selector.append("<p class='msg'>" +  data.errors[i].defaultMessage + " </p>");
+                            }
+
+                        }else{
+                            $("#message").show();
+                            //close message
+                            $("#close").show().click(function () {
+                                $("#message").hide();
+                                $(this).hide();
+                            });
+
+                            //display message
+                            $("#message").addClass("message")
+                                    .css("background-color", "#69db5c").empty()
+                                    .append("<p>" + data.fullname + " has succesfully registered</p>");
+
+                        }
+
+                    }
+                });
+
+            });
+        });
+
+    </script>
 </body>
 </html>
