@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div{
+            border: 1px solid;
+            padding: 20px;
+            margin: 10px;
+        }
+        .divColor:nth-child(even){
+            background-color: #ff3835;
+        }
+        .divColor2:nth-child(odd){
+            background-color: #345fff;
+        }
+    </style>
+</head>
+<body>
+
+<!--Thank you
+<p th:text="${param.q}">Test</p>
+
+<div th:attr="class=${param.className}"></div>
+<div th:attr="class=${param.className2}"></div>
+<div th:attr="class=${param.className}"></div>-->
+
+<!--<ul th:each="user : ${userList}">-->
+    <!--<li th:text="${user.name}"></li>-->
+    <!--<li th:text="${user.email}"></li>-->
+    <!--<li th:text="${user.date}"></li>-->
+<!--</ul>-->
+
+<p th:text = "${message}"></p>
+</body>
+</html>
