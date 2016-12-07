@@ -3,8 +3,13 @@ $height : 100px;
 $width : 100px;
 $template-color: green;
 
+@font-face {
+  font-family: "GeosansLight Medium";
+  src: url(../../resources/fonts/GeosansLight.ttf);
+}
+
 body{
-  font-family: Arial;
+  font-family: "GeosansLight Medium";
   margin: 0;
 }
 
@@ -64,10 +69,23 @@ section {
     font-size: 40px;
   }
 
-  p{
+  .text{
+    font-size: 27px;
+  }
+
+  .text-center{
     text-align: center;
-    font-size: 23px;
-    margin-bottom: 40px;
+  }
+
+  .message{
+    border-radius: 20px;
+    padding: 5px;
+    color: white;
+
+    .msg-txt{
+      font-size: 23px;
+    }
+
   }
 }
 footer {
@@ -137,8 +155,8 @@ form{
   padding: 30px;
   margin-top: 10px;
   position: relative;
-  height: 400px;
-  width: 475px;
+  height: 440px;
+  width: 460px;
   box-shadow: 8px 6px 30px 2px #a2a2a2;
   border-radius: 5px;
   font-size: 20px;
@@ -160,6 +178,69 @@ form{
     left: -170px;
     height: 300px;
   }
+
+  //checkboxes
+  #radio{
+    padding-right: 50px;
+  }
+  .radio{
+    visibility: hidden;
+    &:checked {
+      &+ .radio-label:before{
+        content: "\25CF";
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+        font-size: 30px;
+        color: orange;
+        text-align: center;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .radio-label{
+    display: inline;
+    cursor: pointer;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      background-color: #cecece;
+      margin-right: 5px;
+
+
+    }
+  }
+
+  .checkbox{
+    visibility: hidden;
+    &:checked {
+      &+ .check-label:before{
+        content: "\2022";
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+        font-size: 30px;
+        color: orange;
+        text-align: center;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .check-label{
+    display: inline;
+    cursor: pointer;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      background-color: #cecece;
+      margin-right: 5px;
+
+    }
+  }
 }
 
 h1,h2,h3,h4{
@@ -167,3 +248,6 @@ h1,h2,h3,h4{
   text-align: center;
   width: 60%;
 }
+
+
+

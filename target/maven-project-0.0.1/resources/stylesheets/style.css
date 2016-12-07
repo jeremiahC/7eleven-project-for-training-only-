@@ -1,10 +1,14 @@
-/* line 6, ../sass/style.scss */
+@font-face {
+  font-family: "GeosansLight Medium";
+  src: url(../../resources/fonts/GeosansLight.ttf);
+}
+/* line 11, ../sass/style.scss */
 body {
-  font-family: Arial;
+  font-family: "GeosansLight Medium";
   margin: 0;
 }
 
-/* line 11, ../sass/style.scss */
+/* line 16, ../sass/style.scss */
 header {
   padding: 10px;
   height: 49px;
@@ -14,14 +18,14 @@ header {
   width: 100%;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 nav {
   height: 60px;
   position: relative;
   margin: auto;
   width: 1000px;
 }
-/* line 26, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 nav ul {
   list-style: none;
   border: 2px solid green;
@@ -32,11 +36,11 @@ nav ul {
   font-size: 25px;
   width: 1000px;
 }
-/* line 36, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 nav ul li {
   float: left;
 }
-/* line 38, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 nav ul li a {
   display: block;
   text-decoration: none;
@@ -44,34 +48,46 @@ nav ul li a {
   padding: 15px 77px;
   color: green;
 }
-/* line 46, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 nav ul li a:hover {
   color: white;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 section {
   padding: 10px;
   height: 800px;
   clear: both;
   margin: 20px auto auto;
 }
-/* line 59, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 section article {
   margin: auto auto 30px;
 }
-/* line 63, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 section h1 {
   font-size: 40px;
 }
-/* line 67, ../sass/style.scss */
-section p {
+/* line 72, ../sass/style.scss */
+section .text {
+  font-size: 27px;
+}
+/* line 76, ../sass/style.scss */
+section .text-center {
   text-align: center;
+}
+/* line 80, ../sass/style.scss */
+section .message {
+  border-radius: 20px;
+  padding: 5px;
+  color: white;
+}
+/* line 85, ../sass/style.scss */
+section .message .msg-txt {
   font-size: 23px;
-  margin-bottom: 40px;
 }
 
-/* line 73, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 footer {
   padding: 10px;
   height: 100%;
@@ -80,36 +96,36 @@ footer {
   margin: 20px auto auto;
   font-size: 25px;
 }
-/* line 81, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 footer div {
   margin: auto;
   width: 75%;
 }
-/* line 86, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 footer ul {
   list-style: none;
   border: 1px solid;
   width: 200px;
 }
-/* line 91, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 footer ul li {
   border: 1px solid;
 }
 
-/* line 96, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .container {
   margin: auto;
   width: 530px;
   height: 400px;
 }
 
-/* line 102, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .labels {
   font-size: 30px;
   color: red;
 }
 
-/* line 107, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .form-input {
   background-color: #ededed;
   border: none;
@@ -118,7 +134,7 @@ footer ul li {
   width: 290px;
 }
 
-/* line 115, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .form-date {
   border: none;
   -webkit-border-radius: 13px;
@@ -130,7 +146,7 @@ footer ul li {
   color: #ef6c00;
 }
 
-/* line 126, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
 .form-button {
   border: none;
   height: 50px;
@@ -141,39 +157,99 @@ footer ul li {
   font-size: 25px;
 }
 
-/* line 136, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 form {
   padding: 30px;
   margin-top: 10px;
   position: relative;
-  height: 400px;
-  width: 475px;
+  height: 440px;
+  width: 460px;
   box-shadow: 8px 6px 30px 2px #a2a2a2;
   border-radius: 5px;
   font-size: 20px;
 }
-/* line 146, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 form div {
   margin: 10px;
   float: right;
 }
-/* line 149, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 form div label {
   margin-right: 20px;
 }
-/* line 153, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
 form span {
   font-size: 15px;
 }
-/* line 157, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 form img {
   position: absolute;
   bottom: -80px;
   left: -170px;
   height: 300px;
 }
+/* line 183, ../sass/style.scss */
+form #radio {
+  padding-right: 50px;
+}
+/* line 186, ../sass/style.scss */
+form .radio {
+  visibility: hidden;
+}
+/* line 189, ../sass/style.scss */
+form .radio:checked + .radio-label:before {
+  content: "\25CF";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
+  color: orange;
+  text-align: center;
+  line-height: 20px;
+}
+/* line 200, ../sass/style.scss */
+form .radio-label {
+  display: inline;
+  cursor: pointer;
+}
+/* line 203, ../sass/style.scss */
+form .radio-label:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: #cecece;
+  margin-right: 5px;
+}
+/* line 216, ../sass/style.scss */
+form .checkbox {
+  visibility: hidden;
+}
+/* line 219, ../sass/style.scss */
+form .checkbox:checked + .check-label:before {
+  content: "\2022";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
+  color: orange;
+  text-align: center;
+  line-height: 20px;
+}
+/* line 230, ../sass/style.scss */
+form .check-label {
+  display: inline;
+  cursor: pointer;
+}
+/* line 233, ../sass/style.scss */
+form .check-label:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #cecece;
+  margin-right: 5px;
+}
 
-/* line 165, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 h1, h2, h3, h4 {
   margin: auto auto 5px;
   text-align: center;

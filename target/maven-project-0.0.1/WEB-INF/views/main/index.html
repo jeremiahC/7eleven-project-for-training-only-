@@ -5,13 +5,6 @@
     <title>Welcome to 7 eleven</title>
     <link rel="shortcut icon" href="../../../resources/img/logo.png">
     <link href="../../../resources/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <style>
-        .message{
-            border-radius: 20px;
-            padding: 20px;
-            color: white;
-        }
-    </style>
 
 </head>
 <body>
@@ -32,7 +25,7 @@
     <section>
         <article>
             <h1>Be part of 7eleven family and enjoy exclusive benefits and rewards!</h1>
-            <p>7eleven family card availability may vary on the 7eleven branch</p>
+            <p class="text text-center">7eleven family card availability may vary on the 7eleven branch</p>
         </article>
         <div class="container">
             <label class="labels">Registration Form</label>
@@ -63,17 +56,26 @@
 
                 <div>
                     <label>Gender</label>
-                    <input type="radio" id="female">
-                    <label for="female">Female</label>
-                    <input type="radio" id="male">
-                    <label for="male">Male</label>
+                    <div id="radio">
+                        <input type="radio" name="gender" class="radio" id="female">
+                        <label class="radio-label" for="female">Female</label>
+                        <input type="radio" name="gender" class="radio" id="male">
+                        <label class="radio-label" for="male">Male</label>
+                    </div>
+                </div>
+
+                <div id="checkbox">
+                    <input type="checkbox" name="terms" class="checkbox" id="terms">
+                    <label class="check-label" for="terms">
+                        Proin sit amet lectus venenatis, consectetur magna vitae, convallis diam. Nullam iaculis.
+                    </label>
                 </div>
 
 
                 <div>
                     <input type="button" id="submitBtn" class="form-button" value="Submit">
                 </div>
-                    <img src="../../../resources/img/cards.png" alt="this is and image">
+                    <!--<img src="../../../resources/img/cards.png" alt="this is and image">-->
 
             </form>
         </div>
