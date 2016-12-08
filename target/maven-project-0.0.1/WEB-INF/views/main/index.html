@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to 7 eleven</title>
-    <link rel="shortcut icon" href="../../../resources/img/logo.png">
+    <link rel="shortcut icon" href="../../../resources/img/logo%20(2).png">
     <link href="../../../resources/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <style>
         .message{
@@ -15,97 +15,164 @@
 
 </head>
 <body>
-    <header id="header-image">
-        <!--header-->
+<header>
+    <img src="../../../resources/img/logo.png"/>
+</header>
 
-    </header>
-
-    <nav class="wrapper">
+<div class="container">
+    <nav>
         <ul>
-            <li><a class="nav-link" href="#">Products</a></li>
-            <li><a class="nav-link active" href="#">Register</a></li>
-            <li><a class="nav-link" href="#">Benefits</a></li>
-            <li><a class="nav-link" href="#">Contacts</a></li>
+            <li class="navMenu"><a class="nav-link" href="#">Praesentium</a></li>
+            <li class="navMenu"><a class="nav-link active" href="#">Voluptatum</a></li>
+            <li class="navMenu"><a class="nav-link" href="#">Dignissimos</a></li>
+            <li class="navMenu"><a class="nav-link" href="#">Blanditiis</a></li>
         </ul>
     </nav>
+    <h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem sit amet tempor</h1>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
 
-    <section>
-        <article>
-            <h1>Be part of 7eleven family and enjoy exclusive benefits and rewards!</h1>
-            <p>7eleven family card availability may vary on the 7eleven branch</p>
-        </article>
-        <div class="container">
-            <label class="labels">Registration Form</label>
-            <span id="close">close</span>
-            <div id="message"></div>
+    <!--Form-->
+    <div class="labels">
+        <span>Registration Form</span>
+    </div>
+    <div class="error-window">
+        <span id="close">close</span>
+        <div id="message"></div>
+    </div>
 
-            <form>
-                <input type="hidden" id="csrf-token" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
-                <div>
-                    <label>Name</label>
-                    <input class="form-input" type="text" id="user_name">
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input class="form-input" type="text"  id="user_email">
-                </div>
-                <div>
-                    <label>Mobile Number</label>
-                    <input class="form-input" type="text">
-                </div>
+    <form>
+        <fieldset>
+            <input type="hidden" id="csrf-token" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+            <div>
+                <label>Name</label>
+                <input class="form-input" type="text" id="user_name">
+            </div>
+            <div>
+                <label>Email</label>
+                <input class="form-input" type="text"  id="user_email">
+            </div>
+            <div>
+                <label>Mobile Number</label>
+                <input class="form-input" type="text">
+            </div>
 
-                <div>
-                    <label>Date of Birth</label>
-                    <select class="form-date"></select>
-                    <select class="form-date"></select>
-                    <select class="form-date"></select>
-                </div>
+            <div>
+                <label>Date of Birth</label>
+                <select class="form-date">
+                    <option value="">MONTH</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <select class="form-date">
+                    <option value="">DAY</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select class="form-date">
+                    <option value="">YEAR</option>
+                    <option value="1980">1980</option>
+                    <option value="1981">1981</option>
+                    <option value="1982">1982</option>
+                    <option value="1983">1983</option>
+                    <option value="1984">1984</option>
+                    <option value="1985">1985</option>
+                    <option value="1986">1986</option>
+                    <option value="1987">1987</option>
+                    <option value="1988">1988</option>
+                    <option value="1989">1989</option>
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                    <option value="1994">1994</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                </select>
+            </div>
 
-                <div>
-                    <label>Gender</label>
-                    <input type="radio" id="female">
-                    <label for="female">Female</label>
-                    <input type="radio" id="male">
-                    <label for="male">Male</label>
-                </div>
+            <div>
+                <label>Gender</label>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label>
+            </div>
 
-
-                <div>
-                    <input type="button" id="submitBtn" class="form-button" value="Submit">
-                </div>
-                    <img src="../../../resources/img/cards.png" alt="this is and image">
-
-            </form>
-        </div>
-    </section>
+            <div>
+                <input type="button" id="submitBtn" class="form-button" value="Submit">
+            </div>
+            <img src="../../../resources/img/cards.png" alt="this is and image">
+        </fieldset>
+    </form>
+</div>
 
     <footer>
-        <div>
-            <article>
-                <ul>
-                    <li><label >SUSPENDISSE</label></li>
-                    <li><label >SUSPENDISSE</label></li>
-                    <li><label >SUSPENDISSE</label></li>
-                    <li><label >SUSPENDISSE</label></li>
-                </ul>
-            </article>
-            <article>
-                <ul>
-                    <li>Quisque</li>
-                    <li>Faucibus</li>
-                    <li>Sapien</li>
-                    <li>Hendrerit</li>
-                </ul>
-            </article>
-            <article>
-                <ul>
-                    <li>Quisque</li>
-                    <li>Faucibus</li>
-                    <li>Sapien</li>
-                    <li>Hendrerit</li>
-                </ul>
-            </article>
-
+        <div><!-- class="footerMenu"-->
+            <ul>
+                <li><a href="#">Suspendisse</a></li>
+                <li><a href="#">Quisque</a></li>
+                <li><a href="#">Faucibus</a></li>
+                <li><a href="#">Sapien</a></li>
+                <li><a href="#">Hendrerit</a></li>
+                <li><a href="#">Porta</a></li>
+                <li><a href="#">Mauris</a></li>
+                <li><a href="#">Suscipit</a></li>
+                <li><a href="#">At ipsum</a></li>
+                <li><a href="#">Vehicula</a></li>
+                <li><a href="#">Feugiat</a></li>
+                <li><a href="#">Pellentesque</a></li>
+                <li><a href="#">Accumsan</a></li>
+                <li><a href="#">Velit in urna</a></li>
+                <li><a href="#">Faucibus</a></li>
+                <li><a href="#">Placerat</a></li>
+                <li><a href="#">Vitae</a></li>
+                <li><a href="#">Convallis</a></li>
+                <li><a href="#">Augue</a></li>
+                <li><a href="#">Aliquam</a></li>
+            </ul>
         </div>
     </footer>
 
