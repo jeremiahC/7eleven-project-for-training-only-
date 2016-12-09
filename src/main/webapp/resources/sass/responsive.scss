@@ -1,0 +1,48 @@
+//settings
+$font-size : 70px;
+
+
+//responsive
+@media only screen and
+(-webkit-min-device-pixel-ratio: 1.5), only screen and
+(-o-min-device-pixel-ratio: 3/2), only screen and
+(min-device-pixel-ratio: 1.5) {
+
+  section{
+    article{
+      margin: 0;
+      h1{
+        //font-size: $font-size;
+        text-align: left;
+      }
+
+      .text{
+        //font-size: $font-size - 30;
+        text-align: left;
+      }
+    }
+  }
+
+  footer{
+    article{
+      ul{
+        display: none;
+      }
+    }
+  }
+
+  form{
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+
+    .form-input{
+      width: 100%;
+    }
+    
+    div{
+      float: left;
+    }
+  }
+  
+}

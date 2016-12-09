@@ -95,6 +95,7 @@ footer {
   color: white;
   margin: 20px auto auto;
   font-size: 25px;
+  clear: both;
 }
 /* line 99, ../sass/style.scss */
 footer div {
@@ -177,26 +178,26 @@ form div {
 form div label {
   margin-right: 20px;
 }
-/* line 171, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 form span {
   font-size: 15px;
 }
-/* line 175, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 form img {
   position: absolute;
   bottom: -80px;
   left: -170px;
   height: 300px;
 }
-/* line 183, ../sass/style.scss */
+/* line 184, ../sass/style.scss */
 form #radio {
   padding-right: 50px;
 }
-/* line 186, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 form .radio {
   visibility: hidden;
 }
-/* line 189, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 form .radio:checked + .radio-label:before {
   content: "\25CF";
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -205,12 +206,12 @@ form .radio:checked + .radio-label:before {
   text-align: center;
   line-height: 20px;
 }
-/* line 200, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 form .radio-label {
   display: inline;
   cursor: pointer;
 }
-/* line 203, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 form .radio-label:before {
   content: "";
   display: inline-block;
@@ -220,11 +221,11 @@ form .radio-label:before {
   background-color: #cecece;
   margin-right: 5px;
 }
-/* line 216, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 form .checkbox {
   visibility: hidden;
 }
-/* line 219, ../sass/style.scss */
+/* line 218, ../sass/style.scss */
 form .checkbox:checked + .check-label:before {
   content: "\2022";
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -233,12 +234,12 @@ form .checkbox:checked + .check-label:before {
   text-align: center;
   line-height: 20px;
 }
-/* line 230, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 form .check-label {
   display: inline;
   cursor: pointer;
 }
-/* line 233, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 form .check-label:before {
   content: "";
   display: inline-block;
@@ -249,7 +250,7 @@ form .check-label:before {
   margin-right: 5px;
 }
 
-/* line 246, ../sass/style.scss */
+/* line 245, ../sass/style.scss */
 h1, h2, h3, h4 {
   margin: auto auto 5px;
   text-align: center;

@@ -1,0 +1,34 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 12, ../sass/responsive.scss */
+  section article {
+    margin: 0;
+  }
+  /* line 14, ../sass/responsive.scss */
+  section article h1 {
+    text-align: left;
+  }
+  /* line 19, ../sass/responsive.scss */
+  section article .text {
+    text-align: left;
+  }
+
+  /* line 28, ../sass/responsive.scss */
+  footer article ul {
+    display: none;
+  }
+
+  /* line 34, ../sass/responsive.scss */
+  form {
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+  }
+  /* line 39, ../sass/responsive.scss */
+  form .form-input {
+    width: 100%;
+  }
+  /* line 43, ../sass/responsive.scss */
+  form div {
+    float: left;
+  }
+}
