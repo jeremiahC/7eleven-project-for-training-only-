@@ -1,7 +1,14 @@
 @import "compass/reset";
 
+@font-face {
+  font-family: "GeosansLight Medium";
+  src: url(../../resources/fonts/GeosansLight.ttf);
+}
+
 body{
+
   font-family: "Corbel";
+
 }
 header {
   background: url("../img/banner_bg.png") repeat;
@@ -38,6 +45,7 @@ nav ul{
   }
 }
 
+
 .navMenu{
   float: left;
   width: 24.82%;
@@ -45,6 +53,7 @@ nav ul{
   position: relative;
   //border: solid 1px red;
 }
+
 
 a.nav-link.active:after{
   content: "";
@@ -144,8 +153,8 @@ form{
   margin: 0 auto;
   padding: 30px;
   position: relative;
-  height: 400px;
-  width: 475px;
+  height: 440px;
+  width: 460px;
   box-shadow: 8px 6px 30px 2px #a2a2a2;
   border-radius: 5px;
   font-size: 20px;
@@ -157,6 +166,7 @@ form{
       margin-right: 20px;
     }
   }
+
   span{
     font-size: 15px;
   }
@@ -166,6 +176,67 @@ form{
     bottom: -80px;
     left: -170px;
     height: 300px;
+  }
+
+  //checkboxes
+  #radio{
+    padding-right: 50px;
+  }
+  .radio{
+    visibility: hidden;
+    &:checked {
+      &+ .radio-label:before{
+        content: "\25CF";
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+        font-size: 30px;
+        color: orange;
+        text-align: center;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .radio-label{
+    display: inline;
+    cursor: pointer;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      background-color: #cecece;
+      margin-right: 5px;
+    }
+  }
+
+  .checkbox{
+    visibility: hidden;
+    &:checked {
+      &+ .check-label:before{
+        content: "\2022";
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+        font-size: 30px;
+        color: orange;
+        text-align: center;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .check-label{
+    display: inline;
+    cursor: pointer;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      background-color: #cecece;
+      margin-right: 5px;
+
+    }
   }
 }
 /*form end*/
@@ -212,115 +283,6 @@ footer {
   }
 }
 
-//form responsive
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  /* Styles */
-}
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-  /* Styles */
-}
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-  /* Styles */
-}
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  /* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-  /* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-  /* Styles */
-}
-/**********
-iPad 3
-**********/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-  /* Styles */
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-  /* Styles */
-}
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-  /* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-  /* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-  /* Styles */
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-  /* Styles */
-}
-
-/* iPhone 5 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-  /* Styles */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-  /* Styles */
-}
-
-/* iPhone 6 ----------- */
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-  /* Styles */
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-  /* Styles */
-}
-
-/* iPhone 6+ ----------- */
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-  /* Styles */
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-  /* Styles */
-}
-
-/* Samsung Galaxy S3 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-  /* Styles */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-  /* Styles */
-}
-
-/* Samsung Galaxy S4 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-  /* Styles */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-  /* Styles */
-}
-
-/* Samsung Galaxy S5 ----------- */
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-  /* Styles */
-}
-
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-  /* Styles */
-}

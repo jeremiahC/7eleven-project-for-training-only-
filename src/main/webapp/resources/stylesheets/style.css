@@ -1,3 +1,4 @@
+
 /* line 5, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -12,6 +13,13 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+=======
+@font-face {
+  font-family: "GeosansLight Medium";
+  src: url(../../resources/fonts/GeosansLight.ttf);
+}
+/* line 11, ../sass/style.scss */
+
   margin: 0;
   padding: 0;
   border: 0;
@@ -63,12 +71,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+
 /* line 3, ../sass/style.scss */
 body {
   font-family: "Corbel";
 }
 
 /* line 6, ../sass/style.scss */
+
 header {
   background: url("../img/banner_bg.png") repeat;
   height: 128px;
@@ -81,6 +91,7 @@ header img {
   border-width: 0 22px 0 22px;
 }
 
+
 /* line 17, ../sass/style.scss */
 .container {
   margin: 0 auto;
@@ -89,25 +100,33 @@ header img {
 }
 
 /* line 24, ../sass/style.scss */
+
 nav ul {
   width: auto;
   border: solid 2px #0c6c43;
   padding: 30px 0 65px 0;
 }
+
 /* line 28, ../sass/style.scss */
+
 nav ul li {
   list-style: none;
 }
+
 /* line 30, ../sass/style.scss */
+
 nav ul li a {
   color: #0C6C43;
   font-size: 32px;
   text-decoration: none;
 }
+
 /* line 35, ../sass/style.scss */
+
 nav ul li a:hover {
   opacity: 0.6;
 }
+
 
 /* line 41, ../sass/style.scss */
 .navMenu {
@@ -153,6 +172,7 @@ p {
 
 /*form start*/
 /* line 80, ../sass/style.scss */
+
 .labels {
   width: 48%;
   margin: 0 auto;
@@ -161,6 +181,7 @@ p {
   color: red;
   padding: 20px 0 10px 0;
 }
+
 
 /* line 90, ../sass/style.scss */
 .error-window {
@@ -171,6 +192,7 @@ p {
 }
 
 /* line 97, ../sass/style.scss */
+
 .form-input {
   background-color: #ededed;
   border: none;
@@ -179,7 +201,9 @@ p {
   width: 290px;
 }
 
+
 /* line 105, ../sass/style.scss */
+
 .form-date {
   border: none;
   -webkit-border-radius: 13px;
@@ -207,7 +231,9 @@ div select:nth-child(4) {
   padding: 0 0 0 20px;
 }
 
+
 /* line 133, ../sass/style.scss */
+
 .form-button {
   border: none;
   height: 50px;
@@ -218,22 +244,27 @@ div select:nth-child(4) {
   font-size: 25px;
 }
 
+
 /* line 143, ../sass/style.scss */
+
 form {
   margin: 0 auto;
   padding: 30px;
   position: relative;
-  height: 400px;
-  width: 475px;
+  height: 440px;
+  width: 460px;
   box-shadow: 8px 6px 30px 2px #a2a2a2;
   border-radius: 5px;
   font-size: 20px;
 }
+
 /* line 153, ../sass/style.scss */
+
 form div {
   margin: 10px;
   float: right;
 }
+
 /* line 156, ../sass/style.scss */
 form div label {
   margin-right: 20px;
@@ -243,12 +274,74 @@ form span {
   font-size: 15px;
 }
 /* line 164, ../sass/style.scss */
+
 form img {
   position: absolute;
   bottom: -80px;
   left: -170px;
   height: 300px;
 }
+/* line 184, ../sass/style.scss */
+form #radio {
+  padding-right: 50px;
+}
+/* line 187, ../sass/style.scss */
+form .radio {
+  visibility: hidden;
+}
+/* line 190, ../sass/style.scss */
+form .radio:checked + .radio-label:before {
+  content: "\25CF";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
+  color: orange;
+  text-align: center;
+  line-height: 20px;
+}
+/* line 201, ../sass/style.scss */
+form .radio-label {
+  display: inline;
+  cursor: pointer;
+}
+/* line 204, ../sass/style.scss */
+form .radio-label:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: #cecece;
+  margin-right: 5px;
+}
+/* line 215, ../sass/style.scss */
+form .checkbox {
+  visibility: hidden;
+}
+/* line 218, ../sass/style.scss */
+form .checkbox:checked + .check-label:before {
+  content: "\2022";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
+  color: orange;
+  text-align: center;
+  line-height: 20px;
+}
+/* line 229, ../sass/style.scss */
+form .check-label {
+  display: inline;
+  cursor: pointer;
+}
+/* line 232, ../sass/style.scss */
+form .check-label:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #cecece;
+  margin-right: 5px;
+}
+
 
 /*form end*/
 /* line 172, ../sass/style.scss */
@@ -299,4 +392,5 @@ footer div ul li:not(:nth-child(16)) {
 footer div ul a {
   text-decoration: none;
   color: #FFFFFF;
+
 }
