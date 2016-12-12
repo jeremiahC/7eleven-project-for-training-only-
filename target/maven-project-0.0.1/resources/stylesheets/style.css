@@ -1,132 +1,198 @@
+
+/* line 5, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+=======
 @font-face {
   font-family: "GeosansLight Medium";
   src: url(../../resources/fonts/GeosansLight.ttf);
 }
 /* line 11, ../sass/style.scss */
-body {
-  font-family: "GeosansLight Medium";
+
   margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 22, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+
+/* line 3, ../sass/style.scss */
+body {
+  font-family: "Corbel";
+}
+
+/* line 6, ../sass/style.scss */
+
 header {
-  padding: 10px;
-  height: 49px;
-  border: 1px solid;
-  background: url("../img/NXTLVL_WEBDEB_711_Banner.png") top no-repeat;
-  background-size: contain;
-  width: 100%;
+  background: url("../img/banner_bg.png") repeat;
+  height: 128px;
+}
+/* line 9, ../sass/style.scss */
+header img {
+  display: block;
+  margin: 0 auto;
+  border: solid #ffffff;
+  border-width: 0 22px 0 22px;
+}
+
+
+/* line 17, ../sass/style.scss */
+.container {
+  margin: 0 auto;
+  width: 82%;
+  padding: 30px 0 100px 0;
 }
 
 /* line 24, ../sass/style.scss */
-nav {
-  height: 60px;
-  position: relative;
-  margin: auto;
-  width: 1000px;
-}
-/* line 31, ../sass/style.scss */
+
 nav ul {
-  list-style: none;
-  border: 2px solid green;
-  position: absolute;
-  margin: auto;
-  top: 0px;
-  padding: 0px;
-  font-size: 25px;
-  width: 1000px;
+  width: auto;
+  border: solid 2px #0c6c43;
+  padding: 30px 0 65px 0;
 }
-/* line 41, ../sass/style.scss */
+
+/* line 28, ../sass/style.scss */
+
 nav ul li {
-  float: left;
+  list-style: none;
 }
-/* line 43, ../sass/style.scss */
+
+/* line 30, ../sass/style.scss */
+
 nav ul li a {
-  display: block;
+  color: #0C6C43;
+  font-size: 32px;
   text-decoration: none;
-  text-align: center;
-  padding: 15px 77px;
-  color: green;
 }
-/* line 51, ../sass/style.scss */
+
+/* line 35, ../sass/style.scss */
+
 nav ul li a:hover {
-  color: white;
+  opacity: 0.6;
+}
+
+
+/* line 41, ../sass/style.scss */
+.navMenu {
+  float: left;
+  width: 24.82%;
+  text-align: center;
+  position: relative;
+}
+
+/* line 49, ../sass/style.scss */
+a.nav-link.active:after, .nav-link:hover:after {
+  content: "";
+  border: 10px solid transparent;
+  border-bottom-color: #006b41;
+  position: absolute;
+  left: 46.5%;
+  top: 45px;
 }
 
 /* line 57, ../sass/style.scss */
-section {
-  padding: 10px;
-  height: 800px;
-  clear: both;
-  margin: 20px auto auto;
+.nav-link:hover:after {
+  transition: 10s;
+  opacity: 0.6;
 }
-/* line 64, ../sass/style.scss */
-section article {
-  margin: auto auto 30px;
+
+/* line 63, ../sass/style.scss */
+h1 {
+  width: 82%;
+  margin: 0 auto;
+  font-size: 43px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px 0 20px 0;
 }
-/* line 68, ../sass/style.scss */
-section h1 {
-  font-size: 40px;
-}
+
 /* line 72, ../sass/style.scss */
-section .text {
-  font-size: 27px;
-}
-/* line 76, ../sass/style.scss */
-section .text-center {
+p {
+  width: 82%;
+  margin: 0 auto;
+  font-size: 26px;
   text-align: center;
 }
+
+/*form start*/
 /* line 80, ../sass/style.scss */
-section .message {
-  border-radius: 20px;
-  padding: 5px;
-  color: white;
-}
-/* line 85, ../sass/style.scss */
-section .message .msg-txt {
-  font-size: 23px;
-}
 
-/* line 91, ../sass/style.scss */
-footer {
-  padding: 10px;
-  height: 100%;
-  background-color: #006b41;
-  color: white;
-  margin: 20px auto auto;
-  font-size: 25px;
-  clear: both;
-}
-/* line 99, ../sass/style.scss */
-footer div {
-  margin: auto;
-  width: 75%;
-}
-/* line 104, ../sass/style.scss */
-footer ul {
-  list-style: none;
-  border: 1px solid;
-  width: 200px;
-}
-/* line 109, ../sass/style.scss */
-footer ul li {
-  border: 1px solid;
-}
-
-/* line 114, ../sass/style.scss */
-.container {
-  margin: auto;
-  width: 530px;
-  height: 400px;
-}
-
-/* line 120, ../sass/style.scss */
 .labels {
-  font-size: 30px;
+  width: 48%;
+  margin: 0 auto;
+  font-size: 35px;
+  font-weight: bold;
   color: red;
+  padding: 20px 0 10px 0;
 }
 
-/* line 125, ../sass/style.scss */
+
+/* line 90, ../sass/style.scss */
+.error-window {
+  width: 48%;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 10px 0 20px 0;
+}
+
+/* line 97, ../sass/style.scss */
+
 .form-input {
   background-color: #ededed;
   border: none;
@@ -135,7 +201,9 @@ footer ul li {
   width: 290px;
 }
 
-/* line 133, ../sass/style.scss */
+
+/* line 105, ../sass/style.scss */
+
 .form-date {
   border: none;
   -webkit-border-radius: 13px;
@@ -143,11 +211,29 @@ footer ul li {
   border-radius: 13px;
   height: 40px;
   width: 93px;
-  background-color: #ededed;
-  color: #ef6c00;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #ededed url("../img/select.png") no-repeat;
+  background-position: 90% 50%;
+  background-size: 15px;
 }
 
-/* line 144, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
+div select:nth-child(2) {
+  padding: 0 0 0 5px;
+}
+/* line 125, ../sass/style.scss */
+div select:nth-child(3) {
+  padding: 0 0 0 35px;
+}
+/* line 128, ../sass/style.scss */
+div select:nth-child(4) {
+  padding: 0 0 0 20px;
+}
+
+
+/* line 133, ../sass/style.scss */
+
 .form-button {
   border: none;
   height: 50px;
@@ -158,10 +244,12 @@ footer ul li {
   font-size: 25px;
 }
 
-/* line 154, ../sass/style.scss */
+
+/* line 143, ../sass/style.scss */
+
 form {
+  margin: 0 auto;
   padding: 30px;
-  margin-top: 10px;
   position: relative;
   height: 440px;
   width: 460px;
@@ -169,20 +257,24 @@ form {
   border-radius: 5px;
   font-size: 20px;
 }
-/* line 164, ../sass/style.scss */
+
+/* line 153, ../sass/style.scss */
+
 form div {
   margin: 10px;
   float: right;
 }
-/* line 167, ../sass/style.scss */
+
+/* line 156, ../sass/style.scss */
 form div label {
   margin-right: 20px;
 }
-/* line 172, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 form span {
   font-size: 15px;
 }
-/* line 176, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
+
 form img {
   position: absolute;
   bottom: -80px;
@@ -250,9 +342,55 @@ form .check-label:before {
   margin-right: 5px;
 }
 
-/* line 245, ../sass/style.scss */
-h1, h2, h3, h4 {
-  margin: auto auto 5px;
-  text-align: center;
-  width: 60%;
+
+/*form end*/
+/* line 172, ../sass/style.scss */
+footer {
+  background-color: #0C6C43;
+  height: auto;
+}
+/* line 175, ../sass/style.scss */
+footer div {
+  margin: 0 auto;
+  width: 68%;
+  padding: 30px 0 30px 0;
+  -webkit-column-count: 4;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 4;
+  /* Firefox */
+  column-count: 4;
+  column-gap: 8em;
+}
+/* line 184, ../sass/style.scss */
+footer div ul li {
+  list-style: none;
+  padding-bottom: 5px;
+}
+/* line 188, ../sass/style.scss */
+footer div ul li:nth-child(1),
+footer div ul li:nth-child(6),
+footer div ul li:nth-child(11),
+footer div ul li:nth-child(16) {
+  padding-bottom: 20px;
+}
+/* line 194, ../sass/style.scss */
+footer div ul li:nth-child(1) a,
+footer div ul li:nth-child(6) a,
+footer div ul li:nth-child(11) a,
+footer div ul li:nth-child(16) a {
+  text-transform: uppercase;
+  font-size: 32px;
+}
+/* line 201, ../sass/style.scss */
+footer div ul li:not(:nth-child(1)),
+footer div ul li:not(:nth-child(6)),
+footer div ul li:not(:nth-child(11)),
+footer div ul li:not(:nth-child(16)) {
+  font-size: 26px;
+}
+/* line 207, ../sass/style.scss */
+footer div ul a {
+  text-decoration: none;
+  color: #FFFFFF;
+
 }
