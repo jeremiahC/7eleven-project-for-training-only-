@@ -5,10 +5,11 @@
   src: url(../../resources/fonts/GeosansLight.ttf);
 }
 
-body{
-
-  font-family: "Corbel";
-
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: "GeosansLight Medium";
 }
 header {
   background: url("../img/banner_bg.png") repeat;
@@ -28,23 +29,28 @@ header {
   padding: 30px 0 100px 0;
 }
 
-nav ul{
-  width: auto;
-  border: solid 2px #0c6c43;
-  padding: 30px 0 65px 0;
-  li{
-    list-style: none;
-    a{
-      color: #0C6C43;
-      font-size: 32px;
-      text-decoration: none
-    }
-    a:hover{
-      opacity: 0.6;
+nav {
+  margin: 10px 0 26px 0;
+  ul {
+    display: inline;
+    padding: 18px;
+    border: solid 2px #006B41;
+    li {
+      display: inline;
+      padding: 0 50px 0 99px;
+      list-style: none;
+      a {
+        color: #006B41;
+        position: relative;
+        padding: 29px 0 29px 0;
+        text-decoration: none;
+      }
+      a:hover {
+        opacity: 0.6;
+      }
     }
   }
 }
-
 
 .navMenu{
   float: left;
@@ -282,6 +288,14 @@ footer {
     }
   }
 }
+
+h5 {
+  font-size: 30px;
+  margin: 15px 0 15px 0;
+  text-align: center;
+}
+
+@import "responsive";
 
 
 

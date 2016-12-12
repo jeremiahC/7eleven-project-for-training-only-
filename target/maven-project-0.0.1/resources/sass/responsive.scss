@@ -1,48 +1,214 @@
-//settings
-$font-size : 70px;
-
-
-//responsive
-@media only screen and
-(-webkit-min-device-pixel-ratio: 1.5), only screen and
-(-o-min-device-pixel-ratio: 3/2), only screen and
-(min-device-pixel-ratio: 1.5) {
-
-  section{
-    article{
-      margin: 0;
-      h1{
-        //font-size: $font-size;
-        text-align: left;
-      }
-
-      .text{
-        //font-size: $font-size - 30;
-        text-align: left;
-      }
-    }
+//@media (min-width:320px) {
+//  /* smartphones, iPhone, portrait 480x320 phones */
+//  body {
+//    background: yellow;
+//  }
+//  #default{
+//    display: block;
+//  }
+//  #hidden {
+//    display: none;
+//  }
+//
+//  a.nav-link.active:after, .nav-link:hover:after {
+//    display: none;
+//  }
+//
+//  /* --------- section Tag --------- */
+//  section{
+//    text-align: left;
+//  }
+//
+//  h1{
+//    padding-left: 0;
+//    margin-left: 0;
+//    margin-right: 0;
+//  }
+//}
+//
+//@media (min-width:481px) {
+//  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+//  body {
+//    background: purple;
+//  }
+//  .bars:before{
+//    content: "\2261";
+//    color: white;
+//    font-size: 80px;
+//  }
+//  #search{
+//    position: absolute;
+//    background-color: transparent;
+//    border: 2px solid white;
+//    border-radius: 5px;
+//    padding: 8px;
+//    top: 14px;
+//    width: 40%;
+//    right: 10px;
+//  }
+//
+//  #default{
+//    position: relative;
+//    display: block;
+//    background-color: grey;
+//    margin-bottom: 50px;
+//    height: 80px;
+//  }
+//  #hidden {
+//    display: none;
+//  }
+//
+//  .labels{
+//    margin: 0;
+//  }
+//  .form-input{
+//    width: 100%;
+//  }
+//
+//  .form-date{
+//    width: 40%;
+//  }
+//
+//  h1{
+//    padding-left: 0;
+//    margin-left: 0;
+//    margin-right: 0;
+//    margin: 0;
+//    text-align: left;
+//  }
+//  a.nav-link.active:after, .nav-link:hover:after {
+//    display: none;
+//  }
+//
+//  /* --------- section Tag --------- */
+//  section{
+//    text-align: left;
+//  }
+//
+//  form{
+//    border: 1px solid;
+//    width: 100%;
+//    box-shadow: none;
+//    div{
+//      float: left;
+//    }
+//  }
+//
+//  img{
+//    display:none;
+//  }
+//}
+//
+//@media (min-width:641px) {
+//  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+//  body {
+//    background: brown;
+//  }
+//  #default{
+//    display: block;
+//  }
+//  #hidden {
+//    display: none;
+//  }
+//  a.nav-link.active:after, .nav-link:hover:after {
+//    display: none;
+//  }
+//
+//  /* --------- section Tag --------- */
+//  section{
+//    text-align: left;
+//  }
+//
+//  h1{
+//    padding-left: 0;
+//    margin-left: 0;
+//    margin-right: 0;
+//  }
+//}
+@media (max-width:961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  //body {
+  //  background: deeppink;
+  //}
+  .bars:before{
+    content: "\2261";
+    color: white;
+    font-size: 80px;
+  }
+  #search{
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 8px;
+    top: 20px;
+    width: 40%;
+    right: 10px;
   }
 
-  footer{
-    article{
-      ul{
-        display: none;
-      }
-    }
+  #default{
+    position: relative;
+    display: block;
+    background-color: grey;
+    margin-bottom: 50px;
+    height: 80px;
+  }
+  #hidden {
+    display: none;
+  }
+
+  .labels{
+    margin: 0;
+  }
+  .form-input{
+    width: 100%;
+  }
+
+  .form-date{
+    width: 30%;
+  }
+
+  h1{
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  h5{
+    text-align: left;
+  }
+  a.nav-link.active:after, .nav-link:hover:after {
+    display: none;
+  }
+
+  /* --------- section Tag --------- */
+  section{
+    text-align: left;
   }
 
   form{
-    box-shadow: none;
-    width: 100%;
+    width: 70%;
+    margin: 0;
     padding: 0;
-
-    .form-input{
-      width: 100%;
-    }
-    
+    box-shadow: none;
     div{
       float: left;
     }
+    img{
+      position: absolute;
+      bottom: -364px;
+      left: 204px;
+      height: 250px;
+    }
+
   }
-  
+
+
+  .col-12{
+    width: 100%;
+  }
 }
+
+

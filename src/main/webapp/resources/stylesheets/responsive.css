@@ -1,34 +1,99 @@
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 12, ../sass/responsive.scss */
-  section article {
-    margin: 0;
-  }
-  /* line 14, ../sass/responsive.scss */
-  section article h1 {
-    text-align: left;
-  }
-  /* line 19, ../sass/responsive.scss */
-  section article .text {
-    text-align: left;
+@media (max-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  /* line 133, ../sass/responsive.scss */
+  .bars:before {
+    content: "\2261";
+    color: white;
+    font-size: 80px;
   }
 
-  /* line 28, ../sass/responsive.scss */
-  footer article ul {
+  /* line 138, ../sass/responsive.scss */
+  #search {
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 8px;
+    top: 20px;
+    width: 40%;
+    right: 10px;
+  }
+
+  /* line 149, ../sass/responsive.scss */
+  #default {
+    position: relative;
+    display: block;
+    background-color: grey;
+    margin-bottom: 50px;
+    height: 80px;
+  }
+
+  /* line 156, ../sass/responsive.scss */
+  #hidden {
     display: none;
   }
 
-  /* line 34, ../sass/responsive.scss */
+  /* line 160, ../sass/responsive.scss */
+  .labels {
+    margin: 0;
+  }
+
+  /* line 163, ../sass/responsive.scss */
+  .form-input {
+    width: 100%;
+  }
+
+  /* line 167, ../sass/responsive.scss */
+  .form-date {
+    width: 30%;
+  }
+
+  /* line 171, ../sass/responsive.scss */
+  h1 {
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* line 179, ../sass/responsive.scss */
+  h5 {
+    text-align: left;
+  }
+
+  /* line 182, ../sass/responsive.scss */
+  a.nav-link.active:after, .nav-link:hover:after {
+    display: none;
+  }
+
+  /* --------- section Tag --------- */
+  /* line 187, ../sass/responsive.scss */
+  section {
+    text-align: left;
+  }
+
+  /* line 191, ../sass/responsive.scss */
   form {
-    box-shadow: none;
-    width: 100%;
+    width: 70%;
+    margin: 0;
     padding: 0;
+    box-shadow: none;
   }
-  /* line 39, ../sass/responsive.scss */
-  form .form-input {
-    width: 100%;
-  }
-  /* line 43, ../sass/responsive.scss */
+  /* line 196, ../sass/responsive.scss */
   form div {
     float: left;
+  }
+  /* line 199, ../sass/responsive.scss */
+  form img {
+    position: absolute;
+    bottom: -364px;
+    left: 204px;
+    height: 250px;
+  }
+
+  /* line 209, ../sass/responsive.scss */
+  .col-12 {
+    width: 100%;
   }
 }
